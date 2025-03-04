@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotstar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        *
+        {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            scrollbar-width: none;
+        }
+        .home
+        {
+            width:100vw;
+            height:100vh;
+        }
+        .navbar
+        {
+            width:8vw;
+            min-height:100vh;
+            background-color: black;
+            position:fixed;
+            top:0;
+            left:0;
+        }
+        .content
+        {
+            width:92vw;
+            height:100vh;
+            background-color: black;
+            float:right;
+        }
+        .icons
+        {
+            height:450px;
+        } 
+        .icons i
+        {
+            color:rgba(255, 255, 255, 0.773);
+            cursor: pointer;
+        }
+        .icons i:hover
+        {
+            color:white;
+        }
+        .middlesection
+        {
+            min-height: 100vh;
+            position: relative;
+        }
+        .msecimg
+        {
+            position:sticky;
+            top:0;
+        }
+        .middleSectionOverlay
+        {
+            height:500px;
+            position:relative;
+            bottom:845px;
+        }
+        .middleInfo
+        {
+            width:100%;
+            background:linear-gradient(to right, black,transparent,transparent);
+            padding-top:380px;
+            padding-left:40px;
+            padding-bottom:40px;
+        }
+        .trending
+        {
+            height:350px;
+            margin:0 20px;
+            padding:40px;
+            overflow-x: scroll;
+        }
+        .trending img
+        {
+            min-width:170px;
+            height:250px;
+            border-radius: 5px;
+        }
+        .top10
+        {
+            height:300px;
+            margin:0 20px;
+            padding:40px;
+            overflow-x: scroll;
+        }
+        .top10 img
+        {
+            min-width:280px;
+            height:180px;
+            border-radius: 10px;
+        }
+        .overlayGradient
+        {
+            background:linear-gradient(to bottom,transparent,black,black,black);
+        }
+        .gradbtn
+        {
+            border:none;
+            width:400px;
+            height:50px;
+            font-size:20px;
+            background: #FC466B;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        .live-dot
+        {
+            height:10px;
+            width:10px;
+            border-radius: 50%;
+        }
+        .hvr img
+        {
+            transition:0.5s all ease;
+        }
+        .hvr img:hover
+        {
+            scale:1.2;
+            border-radius:10px;
+        }
+        .movies
+        {
+          width:100%;
+          position:relative;
+          z-index:3;
+          background-color: black;
+        }
+        
+        .movie{
+          position:relative;
+          height:270px;
+          min-width:200px;
+          
+          border-radius: 10px;
+          transition: 0.3s all ease;
+        } 
+        
+        .movie:hover
+        {
+          scale:1.06;
+        }
+        .allmovies{
+          width:100%;
+          padding:25px;
+          overflow-x: scroll;
+          overflow-y: visible;
+          scrollbar-width: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar d-flex justify-content-evenly flex-column align-items-center p-3">
+            <div>
+                <img src="logo.png" width="60px" alt="logo">
+            </div>
+            <div class="icons text-light d-flex justify-content-around flex-column fs-5">
+                <i class="fa-solid fa-house"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-tv"></i>
+                <i class="fa-solid fa-film"></i>
+                <i class="fa-solid fa-person-running"></i>
+                <i class="fa-solid fa-video"></i>
+                <i class="fa-solid fa-table-cells-large"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="uppersection d-flex">
+                <img src="sec-1.png" width="600px" alt="">
+                <div class="imgInfo d-flex flex-column justify-content-center align-items-start bg-dark text-light w-100 m-3 rounded-2 px-3">
+                    <div class="d-flex gap-2 align-items-center">
+                        <img src="jioh.png" height="50px" alt="">
+                        <div>
+                            <div class="fs-5 fw-bold">Daredevil</div>
+                            <div>Streaming From March 5</div>
+                        </div>
+                    </div>
+                    <h5 class="m-2">Daredevil's secret life is on the line in this</h5>
+                    <button class="btn btn-secondary fw-bold fs-5 px-4 m-4">Trailer</button>
+                </div>
+            </div>
+        <div class="middlesection">
+            <img src="sec-2.avif" class="w-100 msecimg" alt=""> 
+            <div class="middleSectionOverlay d-flex flex-column">
+                <div class="overlayGradient">
+                    <div class="middleInfo d-flex ">
+                        <div>
+                            <img src="sec-2l.png" width="400px" alt="">
+                            <div class="overlayInfo">
+                                <div class="headline d-flex align-items-center gap-2">
+                                    <div class="bg-danger live-dot"></div>
+                                    <div class="text-light fs-5 fw-bold">LIVE</div>
+                                    <div class="text-secondary fs-5 fw-bold">12.6Cr views</div>
+                                    <div class="fs-5 text-light">| ICC Trophy 2025 | Cricket</div>
+                                </div>
+                                <p class="text-light" style="width:30%">Watch live stream of the ICC Champions Trophy of 2025 match between New Zealand and India</p>
+                                <div class="d-flex gap-4">
+                                    <button class="btn gradbtn d-flex justify-content-center align-items-center fw-bold text-light gap-4"><i class="fa-solid fa-play"></i> Watch Now</button>
+                                    <button class="btn btn-secondary fs-4 px-3">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div>
+                            <h4 class="text-light px-4">Trending</h4>
+                            <div class="trending d-flex gap-4 hvr">
+                                <img src="l-1.avif" alt="">
+                                <img src="l-2.jpg" alt="">
+                                <img src="l-3.jpg" alt="">
+                                <img src="l-4.jpg" alt="">
+                                <img src="l-5.jpg" alt="">
+                                <img src="l-1.avif" alt="">
+                                <img src="l-2.jpg" alt="">
+                                <img src="l-3.jpg" alt="">
+                                <img src="l-4.jpg" alt="">
+                                <img src="l-5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-light px-4">Top 10 in India</h4>
+                            <div class="allmovies d-flex justify-content-evenly gap-5 align-items-center p-5">
+                                <img src="t1.jpg" class="movie movie1"></img>  
+                                <img src="t2.jpg" class="movie movie2"></img>  
+                                <img src="l-3.jpg" class="movie movie3"></img>  
+                                <img src="t4.jpg" class="movie movie4"></img>  
+                                <img src="t5.jpg" class="movie movie5"></img>  
+                                <img src="l-4.jpg" class="movie movie6"></img>  
+                                <img src="t7.jpg" class="movie movie7"></img>  
+                                <img src="t8.jpg" class="movie movie8"></img>  
+                                <img src="t9.jpg" class="movie movie9"></img>  
+                                <img src="t7.jpg" class="movie movie10"></img>  
+                            </div>
+                    </div>
+                        <div>
+                                <h4 class="text-light px-4">Studios</h4>
+                                <div class="top10 d-flex gap-4 hvr">
+                                    <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5598/1739441155598-a" alt="">
+                                    <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5223/1535223-a-292dbf42783d" alt="">
+                                    <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5731/1739780835731-a" alt="">
+                                    <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7816/1739359307816-a" alt="">
+                                    <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/583/1739358280583-a" alt="">
+                                    <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5224/1535224-a-1d1cfe20ffa3" alt="">
+                                    <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5226/1535226-a-3080287f77cd" alt="">
+                                </div>
+                        </div>
+                        <div>
+                            <h4 class="text-light px-4">Popular Languages</h4>
+                            <div class="top10 d-flex gap-4 hvr">
+                                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6661/1526661-a-00b818b5bc0e" alt="">
+                                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6660/1526660-a-afdd1ecfd8ae" alt="">
+                                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6682/1526682-a-fd4e220ba563" alt="">
+                                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6685/1526685-a-5f5995a53f61" alt="">
+                                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6672/1526672-a-eafe6913c6c8" alt="">
+                                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6659/1526659-a-7271cf19114e" alt="">
+                                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6674/1526674-a-fdd5233a7699" alt="">
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
