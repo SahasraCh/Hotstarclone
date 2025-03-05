@@ -21,7 +21,7 @@
         }
         .navbar
         {
-            width:8vw;
+            width:9vw;
             min-height:100vh;
             background:linear-gradient(to right, black,black);
             position:fixed;
@@ -31,7 +31,7 @@
         }
         .content
         {
-            width:92vw;
+            width:91vw;
             height:100vh;
             background-color: black;
             float:right;
@@ -69,43 +69,49 @@
                 
             }
         }
-        .middlesection
+        .sec-2
         {
             min-height: 100vh;
             position: relative;
+        }
+        .imgInfo{
+            display: flex;
+            flex-direction:column;
+             justify-content:center;
+              align-items:start;
+               background-color:black;
+                
         }
         .msecimg
         {
             position:sticky;
             top:0;
         }
-        .middleSectionOverlay
+        .sec-2o
         {
             height:500px;
+            display: flex;
+            flex-direction: column;
             position:relative;
             bottom:845px;
+            
         }
         .middleInfo
         {
             width:100%;
             background:linear-gradient(to right, black,transparent,transparent);
-            padding-top:380px;
-            padding-left:40px;
-            padding-bottom:40px;
+            padding-top:370px;
+            padding-left:45px;
+            padding-bottom:45px;
         }
         .trending
         {
             height:350px;
+            overflow-x: scroll;
             margin:0 20px;
             padding:40px;
-            overflow-x: scroll;
         }
-        .trending img
-        {
-            min-width:170px;
-            height:250px;
-            border-radius: 5px;
-        }
+        
         .top10
         {
             height:300px;
@@ -113,28 +119,37 @@
             padding:40px;
             overflow-x: scroll;
         }
+        .trending img
+        {
+            min-width:175px;
+            height:250px;
+            border-radius: 7px;
+        }
         .top10 img
         {
             min-width:280px;
             height:180px;
             border-radius: 10px;
         }
-        .overlayGradient
+        .sec-2-1
         {
             background:linear-gradient(to bottom,transparent,black,black,black);
         }
-        .gradbtn
+        .watchnow
         {
+            display:flex;
+             justify-content:center;
+              align-items:center;
             border:none;
             width:400px;
             height:50px;
             font-size:20px;
-            background: #FC466B;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: #FC466B; 
+            background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B); 
+            background: linear-gradient(to right, #3F5EFB, #FC466B);
 
         }
-        .live-dot
+        .circle
         {
             height:10px;
             width:10px;
@@ -161,7 +176,6 @@
           position:relative;
           height:270px;
           min-width:200px;
-          
           border-radius: 10px;
           transition: 0.3s all ease;
         } 
@@ -170,9 +184,12 @@
         {
           scale:1.06;
         }
-        .allmovies{
+        .am{
           width:100%;
           padding:25px;
+          display:flex;
+          justify-content:space-evenly;
+          align-items: center;
           overflow-x: scroll;
           overflow-y: visible;
           scrollbar-width: none;
@@ -188,7 +205,7 @@
 <body>
     
     <div class="home">
-       
+       <!-- navbar -->
         <nav class="navbar d-flex justify-content-evenly flex-column align-items-center p-3">
             <div class="lo">
                 <img  src="logo.png" width="60px"alt="logo">
@@ -225,10 +242,12 @@
                     <p class="p-tag">Profile</p>
                 </div>
         </nav>
+        <!-- middlesection -->
         <div class="content">
+            <!-- sec-1 -->
             <div class="uppersection d-flex">
                 <img src="sec-1.png" width="600px" alt="">
-                <div class="imgInfo d-flex flex-column justify-content-center align-items-start bg-dark text-light w-100 m-3 rounded-2 px-3">
+                <div class="imgInfo text-light w-100 m-3 rounded-2 px-3">
                     <div class="d-flex gap-2 align-items-center">
                         <img src="jioh.png" height="50px" alt="">
                         <div>
@@ -240,23 +259,24 @@
                     <button class="btn btn-secondary fw-bold fs-5 px-4 m-4">Trailer</button>
                 </div>
             </div>
-        <div class="middlesection">
+            <!-- sec-2 -->
+        <div class="sec-2">
             <img src="sec-2.avif" class="w-100 msecimg" alt=""> 
-            <div class="middleSectionOverlay d-flex flex-column">
-                <div class="overlayGradient">
+            <div class="sec-2o">
+                <div class="sec-2-1">
                     <div class="middleInfo d-flex ">
                         <div>
                             <img src="sec-2l.png" width="400px" alt="">
                             <div class="overlayInfo">
                                 <div class="headline d-flex align-items-center gap-2">
-                                    <div class="bg-danger live-dot"></div>
+                                    <div class="bg-danger circle"></div>
                                     <div class="text-light fs-5 fw-bold">LIVE</div>
-                                    <div class="text-secondary fs-5 fw-bold">12.6Cr views</div>
+                                    <div class="text-secondary fs-5 fw-bold">31.95Cr views</div>
                                     <div class="fs-5 text-light">| ICC Trophy 2025 | Cricket</div>
                                 </div>
-                                <p class="text-light" style="width:30%">Watch live stream of the ICC Champions Trophy of 2025 match between New Zealand and India</p>
+                                <p class="text-light" style="width:30%">Watch live stream of the ICC Champions Trophy of 2025 Semi-final match between Australia and India</p>
                                 <div class="d-flex gap-4">
-                                    <button class="btn gradbtn d-flex justify-content-center align-items-center fw-bold text-light gap-4"><i class="fa-solid fa-play"></i> Watch Now</button>
+                                    <button class="btn watchnow fw-bold text-light gap-4"><i class="fa-solid fa-play"></i> Watch Now</button>
                                     <button class="btn btn-secondary fs-4 px-3">+</button>
                                 </div>
                             </div>
@@ -281,7 +301,7 @@
                         </div>
                         <div>
                             <h4 class="text-light px-4">Top 10 in India</h4>
-                            <div class="allmovies d-flex justify-content-evenly gap-5 align-items-center p-5">
+                            <div class="am  gap-5 p-5">
                                 <img src="t1.jpg" class="movie movie1"></img>  
                                 <img src="t2.jpg" class="movie movie2"></img>  
                                 <img src="l-3.jpg" class="movie movie3"></img>  
